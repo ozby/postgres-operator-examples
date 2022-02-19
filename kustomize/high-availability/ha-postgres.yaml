@@ -9,6 +9,7 @@ spec:
     - name: pgha1
       replicas: 2
       dataVolumeClaimSpec:
+        storageClassName: openebs-jiva-csi-default
         accessModes:
         - "ReadWriteOnce"
         resources:
@@ -31,9 +32,9 @@ spec:
       - name: repo1
         volume:
           volumeClaimSpec:
+            storageClassName: openebs-jiva-csi-default
             accessModes:
             - "ReadWriteOnce"
-            storageClassName: openebs-jiva-csi-default
             resources:
               requests:
                 storage: 1Gi
