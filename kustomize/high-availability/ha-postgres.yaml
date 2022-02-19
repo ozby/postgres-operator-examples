@@ -33,6 +33,7 @@ spec:
           volumeClaimSpec:
             accessModes:
             - "ReadWriteOnce"
+            storageClassName: openebs-jiva-csi-default
             resources:
               requests:
                 storage: 1Gi
